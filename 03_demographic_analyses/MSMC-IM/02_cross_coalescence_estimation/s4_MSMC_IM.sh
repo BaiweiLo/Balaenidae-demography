@@ -1,4 +1,4 @@
-/combineCrossCoal.py msmc2.final.txt msmc2.final.txt msmc2.final.txt  > combined.final.txt
+/combineCrossCoal.py ${sp1}_${sp2}_msmc2.final.txt ${sp1}_msmc2.final.txt ${sp2}_msmc2.final.txt  > combined.final.txt
 
 mkdir MSMC-IM_output
 
