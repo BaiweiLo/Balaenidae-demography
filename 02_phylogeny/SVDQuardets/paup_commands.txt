@@ -1,0 +1,5 @@
+# setting blue whale as outgroup
+outgroup BW
+outgroup MW
+# estimate tree with svdQuartets
+svdQuartets evalQuartets=all bootstrap=standard
