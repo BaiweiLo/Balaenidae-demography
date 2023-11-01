@@ -1,0 +1,12 @@
+# these commands are run within julia
+using PhyloNetworks;
+using PhyloPlots;
+CF = readTableCF("path_to_SNPs2CF_output_csv")
+starting_tree=readTopology("nwk_tree_file_based_on_result_of_SVDQuardets")
+
+#Infer starting tree
+net0 = snaq!(starting_tree,CF, hmax=0, filename="net0", seed=1234)
+
+# Infer network
+# SNaQ only infers level one network, so in out phylogenetic setting, hmax>2 is meaningless
+net1 = snaq!(net0, CF, hmax=1, filename="net1", seed=2345)
